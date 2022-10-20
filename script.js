@@ -8,12 +8,15 @@
 
 
 
-/*function beginning () {
+function beginning () {
     alert ("Está pronto para jogar Parrot? Vamnos nessa! \n\ By HaveUMetKarina")
     cardNumber = prompt ('Com quantas cartas quer jogar?');
     console.log (cardNumber)
-}
 
+   
+}
+ beginning()
+ 
 function beginGame () {
     if (cardNumber >=4 && cardNumber <=14) {
         //distribuir as cartas e começaro jogo
@@ -25,4 +28,4 @@ function comparador() {
 
 const game = document.querySelector(".game");
 let cardNumber ;
-let cliques = 0; */
+let cliques = 0; 
