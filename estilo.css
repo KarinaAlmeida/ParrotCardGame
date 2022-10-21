@@ -30,17 +30,7 @@ body{
         line-height: 66px;
     }
 
-
-    /*.grid {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        width: 100%;
-        max-width: 800px;
-        gap: 34px;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    } */
+/*game a partir daqui*/
     .game {
         display: flex;
         flex-wrap: wrap;
@@ -51,34 +41,68 @@ body{
         margin-right: 122px;
         margin-top: 47px;
         margin-bottom: 100px;
-    }
-
+    } 
     
     .cards {
-        width: 117px;
-        height: 146px;
+        width: 120px;
+        height: 150px;
         background-color: #A7E9AF;
         border-radius: 5px;
         border: 1px solid #99CEA8;
         position: relative;
+        transition: all 400ms ease;
+        transform-style: preserve-3d;
     
     }
-
-    .face {
+ 
+    /*face da carta, ou seja, as coisas que as duas faces tem em comum*/
+    .face { 
         position: absolute;
         width: 100%;
         height: 100%;
-    }
+        transition: all 400ms ease;
 
-    .front {
-        width: 100%;
-        height: 100%;
     }
+    /*front é a frente, ou seja, gif, e a parte de trás, a estática */
 
-    .back img {
+    .front img, .back img {
         width: 100px;
         height: 100px;
-        margin:  24px 7px 22px 10px;
+        object-fit: contain;
+        transition-delay: 500ms;
+    }
+    .front img{
+        opacity: 0;
     }
 
+    .back img{
+       opacity: 1;
+       margin:  24px 7px 22px 10px;
+    }
+
+    /*efeito para a carta virar */
+
+    .cards .turn {
+        transform: rotateY(180deg);
+    }
+    .front .turn img {
+        opacity: 1;
+
+    }
+    .back .turn img {
+        opacity: 0;
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 600px) {
+        .container{
+            height: auto;
+        }
+        .h1{
+            width: 312px;
+            height: 63px;
+        }
+
+
+    }
     
