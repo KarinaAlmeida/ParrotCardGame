@@ -43,15 +43,14 @@ body{
         margin-bottom: 100px;
     } 
     
-    .cards {
+    .card {
         width: 120px;
         height: 150px;
         background-color: #A7E9AF;
         border-radius: 5px;
         border: 1px solid #99CEA8;
         position: relative;
-        transition: all 400ms ease;
-        transform-style: preserve-3d;
+        transition: all 1000ms linear;
     
     }
  
@@ -60,7 +59,8 @@ body{
         position: absolute;
         width: 100%;
         height: 100%;
-        transition: all 400ms ease;
+        transition: all 1000ms linear;
+        
 
     }
     /*front é a frente, ou seja, gif, e a parte de trás, a estática */
@@ -73,6 +73,7 @@ body{
     }
     .front img{
         opacity: 0;
+        margin:  24px 7px 22px 10px;
     }
 
     .back img{
@@ -82,16 +83,15 @@ body{
 
     /*efeito para a carta virar */
 
-    .cards .turn {
+    .turn {
         transform: rotateY(180deg);
     }
-    .front .turn img {
+    .front.turn img {
         opacity: 1;
-
     }
-    .back .turn img {
-        opacity: 0;
-    }
+   .back.turn img {
+    opacity: 0;
+   }
 
     /* RESPONSIVIDADE */
     @media (max-width: 600px) {
